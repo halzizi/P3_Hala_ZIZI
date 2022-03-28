@@ -1,0 +1,135 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-bold;
+    src: url(../roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-thin;
+    src: url(../roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: Shirkhand;
+    src: url(../shirkhand/Shrikhand-Regular.ttf);
+    font-size: 100 1000;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+}
+
+header h1 {
+    text-align: center;
+    font-family: 'Shirkhand', cursive;
+    box-shadow:  0 0 8px #d4d4d4;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Main  */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.localisation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background-color: #eaeaea;
+    padding: 16px;
+}
+
+.localisation span {
+    padding-left: 16px;
+}
+
+/* PResentation  */
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 40px 40px 50PX 40PX;
+}
+
+.presentation h2 {
+    font-family: 'Roboto-bold';
+    margin: 0;
+}
+
+.presentation span {
+    padding: 16px 0 30px 0;
+    font-family: 'Robot-thin';
+    font-size: 18px;
+    opacity: 0.6;
+}
+
+.presentation a {
+    width: fit-content;
+}
+
+.presentation a:hover {
+    transform: scale(1.1);
+}
+
+.presentation a button {
+    border-radius: 100px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    border: none;
+    box-shadow: 4px 4px 4px #d4d4d4;
+    padding: 18px 24px 18px 24px;
+    font-weight: bold;
+    font-size: 14PX;
+}
+
+/* Fontionnement  */
+
+.fonctionnement {
+    padding: 0 20px 0 20px;
+}
+
+.fonctionnement ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 273px;
+    padding: 0;
+}
+
+.fonctionnement ol li {
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 24px;
+    background-color: #f6f6f6;
+}
+
+.fonctionnement ol li::marker {
+    border-radius: 100%;
+    border: 1px solid #9356DC;
+}
+
+.fonctionnement ol li i {
+    color: #7e7e7e;
+}
+
+/* .fonctionnement ol li span {
+    font-weight: bold;
+} */
+
+
+
