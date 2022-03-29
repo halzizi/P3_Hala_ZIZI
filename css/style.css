@@ -27,13 +27,51 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-header h1 {
+.header__logo {
     text-align: center;
-    font-family: 'Shirkhand', cursive;
     box-shadow:  0 0 8px #d4d4d4;
-    margin: 0;
     padding: 10px;
 }
+
+.logo {
+    font-family: 'Shirkhand', cursive;
+    margin: 0;
+}
+
+/* header page menu  */
+
+.logo__position {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header__logo button {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    font-family: 'Shirkhand';
+    height: fit-content;
+    font-size: 20px;
+    border: none;
+    height: auto;
+ }
+
+.header__logo a {
+    text-decoration: none;
+    color: black;
+    height: auto;
+}
+
+.header__logo a h1 {
+    padding-right: 100px;
+    margin: 0;
+}
+
+
+
+
 
 /* Main  */
 
@@ -77,16 +115,18 @@ main {
     font-size: 18px;
     opacity: 0.6;
 }
-
-.presentation a {
+.button {
+    text-align: center;
+}
+.lien__button {
     width: fit-content;
 }
 
-.presentation a:hover {
+.lien__button:hover {
     transform: scale(1.1);
 }
 
-.presentation a button {
+.lien__button .button__button {
     border-radius: 100px;
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
@@ -95,6 +135,10 @@ main {
     padding: 18px 24px 18px 24px;
     font-weight: bold;
     font-size: 14PX;
+}
+
+.button--position {
+    text-align: center;
 }
 
 /* Fontionnement  */
@@ -112,10 +156,10 @@ main {
 }
 
 .fonctionnement ol li {
-    border-radius: 10px;
-    border: 1px solid;
+    border-radius: 20px;
     padding: 24px;
     background-color: #f6f6f6;
+    box-shadow: 4px 4px 4px #d4d4d4;
 }
 
 .fonctionnement ol li::marker {
@@ -127,9 +171,113 @@ main {
     color: #7e7e7e;
 }
 
-/* .fonctionnement ol li span {
-    font-weight: bold;
-} */
+/* Restaurants */
 
+.carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f6f6f6;
+}
 
+.carte a {
+    height: 255px;
+    width: 100%;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
 
+.carte a .carte__figure {
+    height: 255px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 4px #e9e9e9;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.carte a .carte__figure .carte__image {
+    height: 175px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.carte a .carte__figure .carte__img {
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.carte .carte__figure .carte__caption {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carte .carte__figure .carte__caption .caption__titre {
+    color: black;
+    padding-left: 10px;
+}
+
+.carte .carte__figure .carte__caption .caption__titre h3 {
+    margin: 0;
+    padding-bottom: 5PX;
+}
+
+.carte .carte__figure .carte__caption .caption__titre span {
+    font-family: Roboto-thin;
+}
+
+.carte a .carte__figure .carte__caption i {
+    color: black;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #353535;
+    color: white;
+    height: 198px;
+}
+
+.footer__logo {
+    padding: 27px 0 0 20px;
+}
+
+footer ul {
+    list-style-type: none;
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer ul .utensils::before {
+    font-family: 'FontAwesome';
+    content: "\f2e7";
+    color: black;
+    margin-right:15px;
+}
+
+footer ul .handshake::before {
+    font-family: 'FontAwesome';
+    content: "\f4c4";
+    color: black;
+    margin-right:15px;
+}
+
+footer ul .contact__a a {
+    text-decoration: none;
+    color: white;
+}
