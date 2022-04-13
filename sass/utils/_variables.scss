@@ -1,0 +1,14 @@
+$primary_color : #9356DC;
+$secondary_color: red;
+
+@mixin test($color) {
+    margin-top: 100px;
+    color: $color;
+    margin-bottom: 100px;
+}
+
+$heading-shadow-size: 0.55rem;
+
+@mixin heading-shadow($color: $primary_color, $shadow-size: $heading-shadow-size){
+    text-shadow: $shadow-size solid $color;
+}
