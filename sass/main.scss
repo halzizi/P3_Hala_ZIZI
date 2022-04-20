@@ -11,7 +11,6 @@
     font-family: Roboto-bold;
     src: url(../roboto/Roboto-Bold.ttf);
 }
-
 @font-face {
     font-family: Roboto-thin;
     src: url(../roboto/Roboto-Thin.ttf);
@@ -34,53 +33,47 @@ body {
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
 }
-header {
-    .header__logo {
+
+
+.header {
+    &__logo {
         text-align: center;
         box-shadow:  0 0 8px #d4d4d4;
         padding: 10px;
-        &__index {
-            color: green;
-        }
-    }
-    .logo {
         font-family: 'Shirkhand', cursive;
         margin: 0;
     }
-}
+ }
 
 /* header page menu  */
 
-.logo__position {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-}
+.header {
+    &__logo--position {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-header {
-    .header__logo {
-        button {
-            padding: 0;
+    &__button {
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        font-family: 'Shirkhand';
+        height: fit-content;
+        font-size: 20px;
+        border: none;
+        height: auto;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        height: auto;
+
+        h1 {
+        padding-right: 100px;
             margin: 0;
-            background-color: white;
-            font-family: 'Shirkhand';
-            height: fit-content;
-            font-size: 20px;
-            border: none;
-            height: auto;
         }
-        a {
-            text-decoration: none;
-            color: black;
-            height: auto;
-
-            h1 {
-                padding-right: 100px;
-                margin: 0;
-            }
-        }
-        
     }
 }
 
@@ -123,14 +116,14 @@ main {
             opacity: 0.6;
         }
     
-        .lien__button {
+        &__lien {
             width: fit-content;
 
             &:hover {
                 transform: scale(1.1);
             }
     
-            .button__button {
+            &__button {
                 border-radius: 100px;
                 background: linear-gradient(#FF79DA, #9356DC);
                 color: white;
@@ -180,7 +173,7 @@ main {
         padding: 20px;
         background-color: #f6f6f6;
     
-        a {
+        &__lien {
             height: 255px;
             width: 100%;
             text-decoration: none;

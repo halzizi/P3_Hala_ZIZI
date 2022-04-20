@@ -1,14 +1,20 @@
 $primary_color : #9356DC;
-$secondary_color: red;
-
-@mixin test($color) {
-    margin-top: 100px;
-    color: $color;
-    margin-bottom: 100px;
-}
+$secondary_color: #FF79DA;
+$tertiary_color: #99E2D0;
 
 $heading-shadow-size: 0.55rem;
 
 @mixin heading-shadow($color: $primary_color, $shadow-size: $heading-shadow-size){
-    text-shadow: $shadow-size solid $color;
+    text-shadow: $shadow-size solid darken($color: #000000, $amount: 0) $color;
+}
+
+@mixin button-principal {
+    border-radius: 100px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    border: none;
+    box-shadow: 4px 4px 4px #d4d4d4;
+    padding: 18px 24px 18px 24px;
+    font-weight: bold;
+    font-size: 14PX;
 }

@@ -27,28 +27,22 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header .header__logo {
+.header__logo {
   text-align: center;
   box-shadow: 0 0 8px #d4d4d4;
   padding: 10px;
-}
-header .header__logo__index {
-  color: green;
-}
-header .logo {
   font-family: "Shirkhand", cursive;
   margin: 0;
 }
 
 /* header page menu  */
-.logo__position {
+.header__logo--position {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
 }
-
-header .header__logo button {
+.header__button {
   padding: 0;
   margin: 0;
   background-color: white;
@@ -58,12 +52,12 @@ header .header__logo button {
   border: none;
   height: auto;
 }
-header .header__logo a {
+.header a {
   text-decoration: none;
   color: black;
   height: auto;
 }
-header .header__logo a h1 {
+.header a h1 {
   padding-right: 100px;
   margin: 0;
 }
@@ -102,13 +96,13 @@ main .presentation span {
   font-size: 18px;
   opacity: 0.6;
 }
-main .presentation .lien__button {
+main .presentation__lien {
   width: fit-content;
 }
-main .presentation .lien__button:hover {
+main .presentation__lien:hover {
   transform: scale(1.1);
 }
-main .presentation .lien__button .button__button {
+main .presentation__lien__button {
   border-radius: 100px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
@@ -148,13 +142,13 @@ main .carte {
   padding: 20px;
   background-color: #f6f6f6;
 }
-main .carte a {
+main .carte__lien {
   height: 255px;
   width: 100%;
   text-decoration: none;
   padding-bottom: 20px;
 }
-main .carte a .carte__figure {
+main .carte__lien .carte__figure {
   height: 255px;
   width: 100%;
   border-radius: 20px;
@@ -165,12 +159,12 @@ main .carte a .carte__figure {
   justify-content: space-between;
   background-color: white;
 }
-main .carte a .carte__figure .carte__image {
+main .carte__lien .carte__figure .carte__image {
   height: 175px;
   width: 100%;
   border-radius: 20px 20px 0 0;
 }
-main .carte a .carte__figure .carte__image .carte__img {
+main .carte__lien .carte__figure .carte__image .carte__img {
   max-width: 100%;
   max-height: 100%;
   min-height: 100%;
@@ -178,25 +172,25 @@ main .carte a .carte__figure .carte__image .carte__img {
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-main .carte a .carte__figure .carte__caption {
+main .carte__lien .carte__figure .carte__caption {
   height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-main .carte a .carte__figure .carte__caption .caption__titre {
+main .carte__lien .carte__figure .carte__caption .caption__titre {
   color: black;
   padding-left: 10px;
 }
-main .carte a .carte__figure .carte__caption .caption__titre h3 {
+main .carte__lien .carte__figure .carte__caption .caption__titre h3 {
   margin: 0;
   padding-bottom: 5PX;
 }
-main .carte a .carte__figure .carte__caption .caption__titre span {
+main .carte__lien .carte__figure .carte__caption .caption__titre span {
   font-family: Roboto-thin;
 }
-main .carte a .carte__figure .carte__caption i {
+main .carte__lien .carte__figure .carte__caption i {
   color: black;
   width: 20%;
   display: flex;
@@ -245,7 +239,7 @@ footer ul .contact__a a {
 }
 
 .test {
-  text-shadow: 0.55rem solid #9356DC;
+  text-shadow: 0.55rem solid black #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
