@@ -35,14 +35,21 @@ body {
   margin: 0;
 }
 
-/* header page menu  */
 .header__logo--position {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
 }
-.header__button {
+.header__logo--position a {
+  text-decoration: none;
+  color: black;
+  height: auto;
+}
+.header__logo--position a h1 {
+  margin: 0;
+}
+.header__logo--position__button {
   padding: 0;
   margin: 0;
   background-color: white;
@@ -52,17 +59,8 @@ body {
   border: none;
   height: auto;
 }
-.header a {
-  text-decoration: none;
-  color: black;
-  height: auto;
-}
-.header a h1 {
-  padding-right: 100px;
-  margin: 0;
-}
 
-/* Main  */
+/* Main page d'acceuil */
 main {
   display: flex;
   flex-direction: column;
@@ -100,7 +98,11 @@ main .presentation__lien {
   width: fit-content;
 }
 main .presentation__lien:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+main .presentation__lien:hover button {
+  font-size: 15px;
+  font-weight: bold;
 }
 main .presentation__lien__button {
   border-radius: 100px;
@@ -117,38 +119,58 @@ main .fonctionnement {
 }
 main .fonctionnement ol {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 273px;
+  flex-direction: row;
+  gap: 24px;
   padding: 0;
+}
+@media screen and (max-width: 872px) {
+  main .fonctionnement ol {
+    flex-direction: column;
+  }
 }
 main .fonctionnement ol li {
   border-radius: 20px;
   padding: 24px;
   background-color: #f6f6f6;
   box-shadow: 4px 4px 4px #d4d4d4;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+main .fonctionnement ol li:hover {
+  transform: scale(1.05);
 }
 main .fonctionnement ol li i {
   color: #7e7e7e;
+  margin-right: 24px;
 }
-main .fonctionnement ol li::marker {
-  border-radius: 100%;
-  border: 1px solid #9356DC;
+main .fonctionnement ol li span {
+  font-weight: bold;
 }
 main .carte {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 60px 20px 60px 20px;
   background-color: #f6f6f6;
 }
-main .carte__lien {
-  height: 255px;
-  width: 100%;
-  text-decoration: none;
-  padding-bottom: 20px;
+main .carte h2 {
+  margin: 0 0 24px 0;
 }
-main .carte__lien .carte__figure {
+main .carte__resto {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 872px) {
+  main .carte__resto {
+    grid-template-columns: 1fr;
+  }
+}
+main .carte__resto__lien {
+  text-decoration: none;
+}
+main .carte__resto__lien__figure {
   height: 255px;
   width: 100%;
   border-radius: 20px;
@@ -159,12 +181,12 @@ main .carte__lien .carte__figure {
   justify-content: space-between;
   background-color: white;
 }
-main .carte__lien .carte__figure .carte__image {
+main .carte__resto__lien__figure__image {
   height: 175px;
   width: 100%;
   border-radius: 20px 20px 0 0;
 }
-main .carte__lien .carte__figure .carte__image .carte__img {
+main .carte__resto__lien__figure__image__img {
   max-width: 100%;
   max-height: 100%;
   min-height: 100%;
@@ -172,37 +194,40 @@ main .carte__lien .carte__figure .carte__image .carte__img {
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-main .carte__lien .carte__figure .carte__caption {
+main .carte__resto__lien__figure__caption {
   height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-main .carte__lien .carte__figure .carte__caption .caption__titre {
+main .carte__resto__lien__figure__caption__titre {
   color: black;
   padding-left: 10px;
 }
-main .carte__lien .carte__figure .carte__caption .caption__titre h3 {
+main .carte__resto__lien__figure__caption__titre h3 {
   margin: 0;
   padding-bottom: 5PX;
 }
-main .carte__lien .carte__figure .carte__caption .caption__titre span {
+main .carte__resto__lien__figure__caption__titre span {
   font-family: Roboto-thin;
 }
-main .carte__lien .carte__figure .carte__caption i {
-  color: black;
-  width: 20%;
-  display: flex;
-  justify-content: space-around;
-  cursor: pointer;
-}
 
-.button {
+.commander {
   text-align: center;
 }
-
-.button--position {
+.commander__lien:hover {
+  transform: scale(1.05);
+}
+.commander__lien__button {
+  border-radius: 100px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border: none;
+  box-shadow: 4px 4px 4px #d4d4d4;
+  padding: 18px 24px 18px 24px;
+  font-weight: bold;
+  font-size: 14PX;
   text-align: center;
 }
 
@@ -224,22 +249,16 @@ footer ul {
 footer ul .utensils::before {
   font-family: "FontAwesome";
   content: "\f2e7";
-  color: black;
   margin-right: 15px;
 }
 footer ul .handshake::before {
   font-family: "FontAwesome";
   content: "\f4c4";
-  color: black;
   margin-right: 15px;
 }
 footer ul .contact__a a {
   text-decoration: none;
   color: white;
-}
-
-.test {
-  text-shadow: 0.55rem solid black #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */

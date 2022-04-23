@@ -8,9 +8,10 @@ $heading-shadow-size: 0.55rem;
     text-shadow: $shadow-size solid darken($color: #000000, $amount: 0) $color;
 }
 
+
 @mixin button-principal {
     border-radius: 100px;
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient($secondary_color, $primary_color);
     color: white;
     border: none;
     box-shadow: 4px 4px 4px #d4d4d4;
@@ -18,3 +19,25 @@ $heading-shadow-size: 0.55rem;
     font-weight: bold;
     font-size: 14PX;
 }
+
+@mixin box-shadow {
+    box-shadow: 4px 4px 4px #d4d4d4;
+}
+
+@mixin grow {
+    transform: scale(1.05);
+}
+
+
+// Breakpoints des medias queerie
+
+$breakpoints: (
+    mobile: 872px
+);
+
+@mixin fonctionnement {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+    
