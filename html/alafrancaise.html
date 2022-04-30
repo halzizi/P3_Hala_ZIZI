@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/style.scss" />
+    <link rel="stylesheet" href="../sass/main.scss" />
     <link rel="icon" type="" href="../images/logo/ohmyfood@2x.svg" />
-    <script src="https://kit.fontawesome.com/7d8ada606a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5a06739364.js" crossorigin="anonymous"></script>
     <title>ohmyfood </title>
 </head>
 
@@ -25,37 +25,123 @@
         </div>
     </header>
 
-    <main>
-        <div>
-            <h1> A la Française </h1>
+    <main class="mainpages2">
+        <div class="titrepage2">
+            <h2> A la Française </h2>
             <i class="fa-thin fa-heart"></i>
         </div>
         
-        <section class="entree">
-            <h2> Entrées </h2>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </section>
-        
-        
-        <section class="plats">
-            <h2> Plats </h2>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+        <section class="menupart">
+            <h3> Entrées </h3>
+            <ul class="menupart__ul">
+                <li class="menupart__ul__li"> 
+                    <div class="menupart__ul__li__titre"> 
+                        <h4>Tartare de poulpe acidulé</h4>
+                        <p>Aux zestes d'orange</p>
+                    </div>
+                    <div class="menupart__ul__li__prix"> 25€ </div>
+                    <div class="menupart__ul__li__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </li>
+
+                <li class="menupart__ul__li"> 
+                    <div class="menupart__ul__li__titre"> 
+                        <h4>Velouté de légumes d'antan</h4>
+                        <p>Carotte, panais, topinambour</p>
+                    </div>
+                    <div class="menupart__ul__li__prix"> 35€ </div>
+                    <div class="menupart__ul__li__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </li>
+                
+                <li class="menupart__ul__li"> 
+                    <div class=" menupart__ul__li__titre" menupart__ul__li__titre> 
+                        <h4>Soupe à l'oignon</h4>
+                        <p>Revisitée</p>
+                    </div>
+                    <div class="menupart__ul__li__prix"> 20€ </div>
+                    <div class="menupart__ul__li__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </li>
             </ul>
         </section>
 
-        <section class="desserts">
-            <h2> Desserts</h2>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+        <section class="menupart">
+            <h3> Plats </h3>
+            <ul class="menupart__ul">
+                <li class="menupart__ul__li"> 
+                    <div class="menupart__ul__li__titre"> 
+                        <h4>Coquilles Saint-Jacques</h4>
+                        <p>Accompagnées d'une purée de panais</p>
+                    </div>
+                    <div class="menupart__ul__li__prix"> 40€ </div>
+                    <div class="menupart__ul__li__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </li>
+
+                <li class="menupart__ul__li"> 
+                    <div class="menupart__ul__li__titre"> 
+                        <h4>Magret de canard</h4>
+                        <p>Et parmentier de pommes de terre</p>
+                    </div>
+                    <div class="menupart__ul__li__prix"> 35€ </div>
+                    <div class="menupart__ul__li__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </li>
+
+                <li class="menupart__ul__li"> 
+                    <div class="menupart__ul__li__titre"> 
+                        <h4>Pigeonneau d'Ille-et-Vilaine</h4>
+                        <p>Sur son lit de gnocchis aux légumes</p>
+                    </div>
+                    <div class="menupart__ul__li__prix"> 44€ </div>
+                    <div class="menupart__ul__li__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="menupart">
+            <h3> Desserts</h3>
+            <ul class="menupart__ul">
+                <li class="menupart__ul__li"> 
+                    <div class="menupart__ul__li__titre"> 
+                        <h4>Pétales de violettes glacés</h4>
+                        <p>Et purée de noisettes</p>
+                    </div>
+                    <div class="menupart__ul__li__prix"> 18€ </div>
+                    <div class="menupart__ul__li__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </li>
+                
+                <li class="menupart__ul__li"> 
+                    <div class="menupart__ul__li__titre"> 
+                        <h4>Fondant au chocolat</h4>
+                        <p>Revisité</p>
+                    </div>
+                    <div class="menupart__ul__li__prix"> 22€ </div>
+                    <div class="menupart__ul__li__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </li>
+
+                <li class="menupart__ul__li"> 
+                    <div class="menupart__ul__li__titre"> 
+                        <h4>Millefeuille croustillant</h4>
+                        <p>Myrtilles et pâte d'amande</p>
+                    </div>
+                    <div class="menupart__ul__li__prix"> 23€ </div>
+                    <div class="menupart__ul__li__icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </li>
             </ul>
         </section>
 
