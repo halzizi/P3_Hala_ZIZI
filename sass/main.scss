@@ -4,27 +4,9 @@
 @import "./components/pageaccueil";
 
 
-// @font-face {
-//     font-family: Roboto;
-//     src: url(../roboto/Roboto-Regular.ttf);
-// }
-// @font-face {
-//     font-family: Roboto-bold;
-//     src: url(../roboto/Roboto-Bold.ttf);
-// }
-// @font-face {
-//     font-family: Roboto-thin;
-//     src: url(../roboto/Roboto-Thin.ttf);
-// }
-// @font-face {
-//     font-family: Shirkhand;
-//     src: url(../shirkhand/Shrikhand-Regular.ttf);
-//     font-size: 100 1000;
-// }
-
 * {
     box-sizing: border-box;
-  }
+}
 
 body {
     margin: 0;
@@ -34,6 +16,55 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.spin {
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+    &__header {
+        &__container {
+            &__load {
+                 width: $size*10;
+                 height: $size*7.5;
+                 display: flex;
+                 justify-content: space-evenly;
+                 position: absolute;
+                 &__bar {
+                     background-color: $primary_color;
+                     height: 100%;
+                     width: $size;
+                     animation: bars 1000ms backwards infinite ease-in-out alternate;
+                     @for $i from 1 through 5 {
+                         &--#{$i} {
+                             animation-delay: 1000ms * $i;
+         
+                         }
+                     }
+ 
+                     &--1 {
+                         animation-delay: 200ms;
+                     }
+                     
+                     &--2 {
+                         animation-delay: 400ms;
+                     }
+                     
+                     &--3 {
+                         animation-delay: 600ms;
+                     }
+                     
+                     &--4 {
+                         animation-delay: 800ms;
+                     }
+                     
+                     &--5 {
+                         animation-delay: 1000ms;
+                     }
+                 }
+             }
+         }   
+     }
+}
+
 .header {
     &__logo {
         text-align: center;
@@ -41,6 +72,7 @@ body {
         padding: 10px;
         font-family: 'Shirkhand', cursive;
         margin: 0;
+        color: blue;
     }
 } 
 

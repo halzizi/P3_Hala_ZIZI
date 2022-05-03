@@ -2,13 +2,13 @@ $primary_color : #9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
 
+// option 1 shadow 
 $heading-shadow-size: 0.55rem;
-
 @mixin heading-shadow($color: $primary_color, $shadow-size: $heading-shadow-size){
     text-shadow: $shadow-size solid darken($color: #000000, $amount: 0) $color;
 }
 
-
+// Mixin button all pages 
 @mixin button-principal {
     border-radius: 100px;
     background: linear-gradient($secondary_color, $primary_color);
@@ -20,29 +20,33 @@ $heading-shadow-size: 0.55rem;
     font-size: 14PX;
 }
 
+// Mixin box-shadow all pages 
 @mixin box-shadow {
     box-shadow: 4px 4px 4px #d4d4d4;
 }
 
+// Mixin grow on hover all pages 
 @mixin grow {
     transform: scale(1.05);
 }
 
 
 // Breakpoints des medias queerie
-
 $breakpoints: (
     mobile: 872px
 );
 
+// Mixin Media querie for .fonctionnement
 @mixin fonctionnement {
     @media screen and (max-width: map-get($breakpoints, mobile)){
         @content;
     }
 }
-    
+
+
+
+// Keyframes animation progess menu page 
 @keyframes progress {
-    
     0% {
         transform: scaleY(0);
     }
@@ -52,6 +56,7 @@ $breakpoints: (
     }
 }
 
+// Keyframes animation opacity option 1
 @keyframes opacity-check { 
     0% { opacity: 0; } 
     25% { opacity: 0.25; } 
@@ -60,9 +65,27 @@ $breakpoints: (
     100% { opacity: 1; } 
 }
 
-$total-items: 3;
+// Animation delay for menu pages 
+$total-items: 5;
 @for $i from 1 through $total-items {
   li:nth-child(#{$i}) {
     animation-delay: 1s * $i;
   }
 }
+
+// Keyframe loader
+
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+        
+    }
+    100% {
+        transform: scaleY(1.0);
+    }
+}
+
+
+$size: 3vh;
+
+// lol

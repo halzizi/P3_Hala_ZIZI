@@ -36,6 +36,22 @@ li:nth-child(3) {
   animation-delay: 3s;
 }
 
+li:nth-child(4) {
+  animation-delay: 4s;
+}
+
+li:nth-child(5) {
+  animation-delay: 5s;
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 @font-face {
   font-family: Roboto;
   src: url(../roboto/Roboto-Regular.ttf);
@@ -359,12 +375,62 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.spin {
+  height: 100px;
+  width: 100px;
+  border: 2px solid red;
+}
+.spin__header__container__load {
+  width: 30vh;
+  height: 22.5vh;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+}
+.spin__header__container__load__bar {
+  background-color: #9356DC;
+  height: 100%;
+  width: 3vh;
+  animation: bars 1000ms backwards infinite ease-in-out alternate;
+}
+.spin__header__container__load__bar--1 {
+  animation-delay: 1000ms;
+}
+.spin__header__container__load__bar--2 {
+  animation-delay: 2000ms;
+}
+.spin__header__container__load__bar--3 {
+  animation-delay: 3000ms;
+}
+.spin__header__container__load__bar--4 {
+  animation-delay: 4000ms;
+}
+.spin__header__container__load__bar--5 {
+  animation-delay: 5000ms;
+}
+.spin__header__container__load__bar--1 {
+  animation-delay: 200ms;
+}
+.spin__header__container__load__bar--2 {
+  animation-delay: 400ms;
+}
+.spin__header__container__load__bar--3 {
+  animation-delay: 600ms;
+}
+.spin__header__container__load__bar--4 {
+  animation-delay: 800ms;
+}
+.spin__header__container__load__bar--5 {
+  animation-delay: 1000ms;
+}
+
 .header__logo {
   text-align: center;
   box-shadow: 0 0 8px #d4d4d4;
   padding: 10px;
   font-family: "Shirkhand", cursive;
   margin: 0;
+  color: blue;
 }
 
 main {
