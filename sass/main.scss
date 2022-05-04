@@ -16,63 +16,101 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+// .loader { 
+//     font-family: "Shrikhand"; 
+//     display: flex; 
+//     flex-direction: column; 
+//     justify-content: center; 
+//     align-items: center; 
+//     vertical-align: middle; 
+//     text-align: center; 
+//     position: fixed; 
+//     z-index: 9999; 
+//     background: white; 
+//     width: 100%; 
+//     height: 100%; 
+//     pointer-events: none; 
+//     animation: fade 3s 3s linear forwards; 
+    
+//     &__page {
+//         border: 10px solid grey; 
+//         width: 200px; height: 200px; 
+//         border-radius: 50%; 
+//         border-top: 20px solid #9356dc; 
+//         border-bottom: 20px solid #ff79da; 
+//         border-left: 20px solid #99e2d0; 
+//         border-right: 20px solid #99e2d0; 
+//         animation: loader__page 3s 3s linear forwards; 
+//     }
+// }
+
 .spin {
-    height: 100px;
-    width: 100px;
-    border: 2px solid red;
-    &__header {
-        &__container {
-            &__load {
-                 width: $size*10;
-                 height: $size*7.5;
-                 display: flex;
-                 justify-content: space-evenly;
-                 position: absolute;
-                 &__bar {
-                     background-color: $primary_color;
-                     height: 100%;
-                     width: $size;
-                     animation: bars 1000ms backwards infinite ease-in-out alternate;
-                     @for $i from 1 through 5 {
-                         &--#{$i} {
-                             animation-delay: 1000ms * $i;
-         
-                         }
-                     }
- 
-                     &--1 {
-                         animation-delay: 200ms;
-                     }
-                     
-                     &--2 {
-                         animation-delay: 400ms;
-                     }
-                     
-                     &--3 {
-                         animation-delay: 600ms;
-                     }
-                     
-                     &--4 {
-                         animation-delay: 800ms;
-                     }
-                     
-                     &--5 {
-                         animation-delay: 1000ms;
-                     }
-                 }
-             }
-         }   
-     }
+    font-family: "Shrikhand"; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // justify-content: space-evenly;
+    // align-items: center; 
+    // vertical-align: middle; 
+    // text-align: center; 
+    position: fixed; 
+    z-index: 9999; 
+    background: white; 
+    width: 100%; 
+    height: 100%; 
+    pointer-events: none; 
+    animation: fade 3s 3s linear forwards;
+    
+    &__count {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
+        width: 100%;
+        
+        &__bar {
+            background-color: $primary_color;
+            width: $size;
+            height: $size*7.5;
+            animation: bars 1000ms backwards infinite ease-in-out alternate;
+            @for $i from 1 through 5 {
+                &--#{$i} {
+                    animation-delay: 500ms * $i;
+                }
+            }
+    
+            &--1 {
+                animation-delay: 200ms;
+            }
+
+            &--2 {
+                animation-delay: 400ms;
+            }
+
+            &--3 {
+                animation-delay: 600ms;
+            }
+
+            &--4 {
+                animation-delay: 800ms;
+            }
+
+            &--5 {
+                animation-delay: 1000ms;
+            }
+        }
+    }
 }
 
 .header {
     &__logo {
-        text-align: center;
-        box-shadow:  0 0 8px #d4d4d4;
-        padding: 10px;
-        font-family: 'Shirkhand', cursive;
-        margin: 0;
-        color: blue;
+    text-align: center;
+    box-shadow:  0 0 8px #d4d4d4;
+    padding: 10px;
+    font-family: 'Shirkhand', cursive;
+    margin: 0;
     }
 } 
 
@@ -87,33 +125,33 @@ footer {
     height: 198px;
 
     .footer__logo {
-        padding: 27px 0 0 20px;
+    padding: 27px 0 0 20px;
     }
 
     ul {
-        list-style-type: none;
-        height: 95px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    list-style-type: none;
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-        .utensils::before {
-            font-family: 'FontAwesome';
-            content: "\f2e7";
-            margin-right:15px;
-        }
+    .utensils::before {
+        font-family: 'FontAwesome';
+        content: "\f2e7";
+        margin-right:15px;
+    }
 
-        .handshake::before {
-            font-family: 'FontAwesome';
-            content: "\f4c4";
-            margin-right:15px;
-        }
+    .handshake::before {
+        font-family: 'FontAwesome';
+        content: "\f4c4";
+        margin-right:15px;
+    }
 
-        .contact__a {
-            a {
-                text-decoration: none;
-                color: white;
-            }
+    .contact__a {
+        a {
+    text-decoration: none;
+    color: white;
         }
+    }
     }
 }

@@ -429,8 +429,7 @@ body {
   box-shadow: 0 0 8px #d4d4d4;
   padding: 10px;
   font-family: "Shirkhand", cursive;
-  margin: 0;
-  color: blue;
+  margin: 15px;
 }
 
 main {

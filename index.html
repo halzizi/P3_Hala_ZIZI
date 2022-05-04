@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheetscss" href="./css/style.css"/>
+    <link rel="stylesheetscss" href="./css/style.css" />
     <link rel="stylesheetscss" href="sass/main.scss">
+    <link rel="stylesheet" href="/css/style.cs" />
     <link rel="icon" type="image/svg" href="./images/logo/ohmyfood@2x.svg" />
     <script src="https://kit.fontawesome.com/5a06739364.js" crossorigin="anonymous"></script>
     <title> ohmyfood </title>
@@ -15,15 +16,20 @@
 
 <body>
 
-    <!-- <div class="container">
-        <div class="load">
-            <div class="load__bar load__bar--1"></div>
-            <div class="load__bar load__bar--2"></div>
-            <div class="load__bar load__bar--3"></div>
-            <div class="load__bar load__bar--4"></div>
-            <div class="load__bar load__bar--5"></div>
-        </div>
+    <!-- <div class="loader"> 
+        <div class="loader__page"></div> 
     </div> -->
+
+    <div class="spin">
+        <div class="spin__count">
+            <div class="spin__count__bar spin__count__bar--1"></div>
+            <div class="spin__count__bar spin__count__bar--2"></div>
+            <div class="spin__count__bar spin__count__bar--3"></div>
+            <div class="spin__count__bar spin__count__bar--4"></div>
+            <div class="spin__count__bar spin__count__bar--5"></div>
+        </div>
+        
+    </div>
 
     <header class="header">
         <h1 class="header__logo header__logo--index"> ohmyfood </h1>
@@ -39,8 +45,8 @@
             <h2> Réserver le menu qui <br> vous convient </h2>
             <span> Découvrez des restaurants d'exception, séléctionnés par nos soins. </span>
             <a href="./html/loader.html" class="presentation__lien">
-                <button class="presentation__lien__button" type="button"> 
-                    Explorer nos restaurants 
+                <button class="presentation__lien__button" type="button">
+                    Explorer nos restaurants
                 </button>
             </a>
         </section>
@@ -67,14 +73,15 @@
 
         <section class="carte">
             <h2> Restaurants </h2>
-            <div class="carte__resto"> 
+            <div class="carte__resto">
                 <a href="./html/lapalettedugout.html" class="carte__resto__lien">
                     <figure class="carte__resto__lien__figure">
                         <div class="carte__resto__lien__figure__image">
-                            <img src="./images/restaurants/gout.jpg" alt="Photo d'un plat du restaurant" class="carte__resto__lien__figure__image__img">
+                            <img src="./images/restaurants/gout.jpg" alt="Photo d'un plat du restaurant"
+                                class="carte__resto__lien__figure__image__img">
                         </div>
                         <figcaption class="carte__resto__lien__figure__caption">
-                            <div class="carte__resto__lien__figure__caption__titre" >
+                            <div class="carte__resto__lien__figure__caption__titre">
                                 <h3> La palettedu gôut </h3>
                                 <span> Ménilmontant </span>
                             </div>
@@ -89,7 +96,8 @@
                 <a href="./html/lanotenechantee.html" class="carte__resto__lien">
                     <figure class="carte__resto__lien__figure">
                         <div class="carte__resto__lien__figure__image">
-                            <img src="./images/restaurants/note.jpg" alt="Photo d'un plat du restaurant" class="carte__resto__lien__figure__image__img">
+                            <img src="./images/restaurants/note.jpg" alt="Photo d'un plat du restaurant"
+                                class="carte__resto__lien__figure__image__img">
                         </div>
                         <figcaption class="carte__resto__lien__figure__caption">
                             <div class="carte__resto__lien__figure__caption__titre">
@@ -107,7 +115,8 @@
                 <a href="./html/alafrancaise.html" class="carte__resto__lien">
                     <figure class="carte__resto__lien__figure">
                         <div class="carte__resto__lien__figure__image">
-                            <img src="./images/restaurants/francaise.jpg" alt="Photo d'un plat du restaurant" class="carte__resto__lien__figure__image__img">
+                            <img src="./images/restaurants/francaise.jpg" alt="Photo d'un plat du restaurant"
+                                class="carte__resto__lien__figure__image__img">
                         </div>
                         <figcaption class="carte__resto__lien__figure__caption">
                             <div class="carte__resto__lien__figure__caption__titre">
@@ -117,7 +126,7 @@
                             <div class="carte__resto__lien__figure__caption__icon">
                                 <i class="far fa-heart"></i>
                                 <i class="fas fa-heart"></i>
-                            </div>                    
+                            </div>
                         </figcaption>
                     </figure>
                 </a>
@@ -125,7 +134,8 @@
                 <a href="./html/ledelicedessens.html" class="carte__resto__lien">
                     <figure class="carte__resto__lien__figure">
                         <div class="carte__resto__lien__figure__image">
-                            <img src="./images/restaurants/sens.jpg" alt="Photo d'un plat du restaurant" class="carte__resto__lien__figure__image__img">
+                            <img src="./images/restaurants/sens.jpg" alt="Photo d'un plat du restaurant"
+                                class="carte__resto__lien__figure__image__img">
                         </div>
                         <figcaption class="carte__resto__lien__figure__caption">
                             <div class="carte__resto__lien__figure__caption__titre">
