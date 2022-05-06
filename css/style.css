@@ -156,10 +156,22 @@ li:nth-child(5) {
   height: auto;
 }
 
+.image_rest {
+  height: 200px;
+}
+
 .mainpages2 {
   border-radius: 24px 24px 0 0;
   background-color: #f6f6f6;
   padding: 14px;
+}
+.mainpages2__restname {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainpages2__restname h1 {
+  font-family: "Shirkhand", cursive;
 }
 
 .menupart h3 {
