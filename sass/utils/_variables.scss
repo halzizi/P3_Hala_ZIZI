@@ -2,6 +2,8 @@ $primary_color : #9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
 
+$size: 3vh;
+
 // option 1 shadow 
 $heading-shadow-size: 0.55rem;
 @mixin heading-shadow($color: $primary_color, $shadow-size: $heading-shadow-size){
@@ -30,12 +32,56 @@ $heading-shadow-size: 0.55rem;
     transform: scale(1.05);
 }
 
+// animation prices 
+@keyframes price { 
+    0% { 
+        transform: translateX(0);
+        // visibility:visible;
+        position: fixed;
+        opacity: 1;
+        right: 0;
+    } 
+
+    25% { 
+        transform: translateX(0);
+        // visibility:visible;
+        position: fixed;
+        opacity: 1;
+        right: 10px;
+
+    }
+
+    50% {
+        transform: translateX(0);
+        // visibility:visible;
+        position: fixed;
+        opacity: 1;
+        right: 20px;
+
+    }
+
+    75%{
+        transform: translateX(0);
+        // visibility:visible;
+        
+        opacity: 1;
+        right: 30px;
+
+    }
+
+    100% { 
+        transform: translateX(0.5);
+        // visibility:hidden;
+        opacity: 0;
+        right: 50px;
+    } 
+} 
+
 
 // Breakpoints des medias queerie
 $breakpoints: (
     mobile: 872px
 );
-
 // Mixin Media querie for .fonctionnement
 @mixin fonctionnement {
     @media screen and (max-width: map-get($breakpoints, mobile)){
@@ -51,8 +97,7 @@ $breakpoints: (
         transform: scaleY(0);
     }
     100% {
-        transform: scale(1);
-        opacity: 1;
+        transform: scale(-70px);
     }
 }
 
@@ -73,7 +118,7 @@ $total-items: 5;
   }
 }
 
-// Keyframe loader
+// Keyframe bars
 
 @keyframes bars {
     0% {
@@ -89,32 +134,6 @@ $total-items: 5;
     }
 }
 
-
-$size: 3vh;
-
-@keyframes loader__page { 
-    0% {
-        transform: rotate(100deg);
-        visibility:visible;
-        opacity: 1;
-    }
-    50%{
-        transform: rotate(180deg);
-        visibility:visible;
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 0.6;
-    }
-
-    100% {
-        transform: rotate(360deg);
-        visibility:hidden;
-        opacity: 0;
-    }
-}
-
 @keyframes fade {
     from{
       opacity:1;
@@ -123,5 +142,28 @@ $size: 3vh;
     to{
       opacity:0;
       display:none;
+    }
+}
+
+// animation page de menu 
+
+@keyframes rotate {
+    0% {
+      transform: rotate(-270deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+  
+@keyframes hover {
+    0% {
+      width: 0px;
+    }
+    50% {
+      width: 10%;
+    }
+    100% {
+      width: 15%;
     }
 }
