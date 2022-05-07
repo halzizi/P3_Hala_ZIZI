@@ -7,31 +7,32 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../sass/main.scss" />
     <link rel="stylesheet" href="../css/style.cs"/>
-    <link rel="icon" type="" href="../images/logo/ohmyfood@2x.svg" />
+    <link rel="icon" type="image/svg" href="../images/logo/ohmyfood@2x.svg" />
     <script src="https://kit.fontawesome.com/5a06739364.js" crossorigin="anonymous"></script>    
     <title>ohmyfood </title>
 </head>
 
 <body>
-    
     <header class="header">
         <div class="header__logo header__logo--position">
-            <a href="../index.html">
+            <a href="../index.html" class="header__logo--position__titre">
                 <h1> ohmyfood </h1>
             </a>
-            <button type="header__button">
-                <a href="../index.html">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </a>   
-            </button>
+            <a href="../index.html" class=" header__logo--position__arrow">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
         </div>
     </header>
 
-    <main class="mainpages2">
+    <img class="image_rest" src="../images/restaurants/notepetit.jpg" alt="Photo d'un plat du restaurant"/>
 
-        <div>
+    <main class="mainpages2">
+        <div class="mainpages2__restname">
             <h1> La note enchantée </h1>
-            <i class="fa-thin fa-heart"></i>
+            <div class="carte__resto__figure__caption__icon">
+                <i class="far fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
         </div>
       
         <section class="menupart">
@@ -179,13 +180,11 @@
             </ul>
         </section>
 
-        <section class="commander">
-            <a class="commander__lien" href="#">
-                <button class="commander__lien__button" type="button">
-                   <span> Commander </span>
-                </button>
-            </a>
-        </section>
+        <div class="commander">
+            <button class="commander__button" type="button">
+                Commander
+            </button>
+        </div>
     </main>
 
     <footer>

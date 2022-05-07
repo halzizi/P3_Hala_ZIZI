@@ -1,124 +1,87 @@
 $primary_color : #9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
-
 $size: 3vh;
+$total-items: 5;
+$breakpoints: (
+    mobile: 872px
+);
+$footer_background-color: #353535;
+$white_background: #FFFF;
+$white-text-color: #FFFF;
 
-// option 1 shadow 
-$heading-shadow-size: 0.55rem;
-@mixin heading-shadow($color: $primary_color, $shadow-size: $heading-shadow-size){
-    text-shadow: $shadow-size solid darken($color: #000000, $amount: 0) $color;
-}
+// Mixin button all pages :
 
-// Mixin button all pages 
 @mixin button-principal {
     border-radius: 100px;
-    background: linear-gradient($secondary_color, $primary_color);
+    @include linear-gradient;
     color: white;
     border: none;
-    box-shadow: 4px 4px 4px #d4d4d4;
+    @include box-shadow;
     padding: 18px 24px 18px 24px;
     font-weight: bold;
     font-size: 14PX;
 }
 
-// Mixin box-shadow all pages 
-@mixin box-shadow {
-    box-shadow: 4px 4px 4px #d4d4d4;
+@mixin button-principal_hover {
+    @include grow ;
+    @include linear-gradient-light;
+    @include box-shadow_darken;
+    font-size: 15px;
+    font-weight: bold;
 }
 
-// Mixin grow on hover all pages 
+@mixin linear-gradient {
+    background: linear-gradient($secondary_color, $primary_color);
+}
+
+@mixin linear-gradient-light{
+    background: linear-gradient(
+        lighten($secondary_color, 5%),
+        lighten($primary_color, 5%),
+    )
+}
+
+@mixin box-shadow {
+    box-shadow: 3px 0px 6px 0px rgb(0, 0, 0, 0.35 );
+}
+
+@mixin box-shadow_darken {
+    box-shadow: 0px 0px 6px 2px rgb(0, 0, 0, 0.63);
+    
+}
+ 
 @mixin grow {
     transform: scale(1.05);
 }
 
-// animation prices 
-@keyframes price { 
-    0% { 
-        transform: translateX(0);
-        // visibility:visible;
-        position: fixed;
-        opacity: 1;
-        right: 0;
-    } 
+// Mixin Media querie for .fonctionnement :
 
-    25% { 
-        transform: translateX(0);
-        // visibility:visible;
-        position: fixed;
-        opacity: 1;
-        right: 10px;
-
-    }
-
-    50% {
-        transform: translateX(0);
-        // visibility:visible;
-        position: fixed;
-        opacity: 1;
-        right: 20px;
-
-    }
-
-    75%{
-        transform: translateX(0);
-        // visibility:visible;
-        
-        opacity: 1;
-        right: 30px;
-
-    }
-
-    100% { 
-        transform: translateX(0.5);
-        // visibility:hidden;
-        opacity: 0;
-        right: 50px;
-    } 
-} 
-
-
-// Breakpoints des medias queerie
-$breakpoints: (
-    mobile: 872px
-);
-// Mixin Media querie for .fonctionnement
 @mixin fonctionnement {
     @media screen and (max-width: map-get($breakpoints, mobile)){
         @content;
     }
 }
 
+// Keyframes animation progess menu page :
 
-
-// Keyframes animation progess menu page 
 @keyframes progress {
     0% {
         transform: scaleY(0);
     }
     100% {
-        transform: scale(-70px);
+        transform: scale(1);
     }
 }
+// Animation delay for menu pages :
 
-// Keyframes animation opacity option 1
-@keyframes opacity-check { 
-    0% { opacity: 0; } 
-    25% { opacity: 0.25; } 
-    50% { opacity: 0.5; } 
-    75% { opacity: 0.75; } 
-    100% { opacity: 1; } 
-}
-
-// Animation delay for menu pages 
-$total-items: 5;
 @for $i from 1 through $total-items {
   li:nth-child(#{$i}) {
     animation-delay: 1s * $i;
   }
 }
 
-// Keyframe bars
+// Keyframe bars :
 
 @keyframes bars {
     0% {
@@ -145,7 +108,7 @@ $total-items: 5;
     }
 }
 
-// animation page de menu 
+// animation page de menu :
 
 @keyframes rotate {
     0% {
