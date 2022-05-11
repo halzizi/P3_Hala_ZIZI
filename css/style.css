@@ -67,22 +67,6 @@ li:nth-child(5) {
     width: 15%;
   }
 }
-@font-face {
-  font-family: Roboto;
-  src: url(../roboto/Roboto-Regular.ttf);
-}
-@font-face {
-  font-family: Roboto-bold;
-  src: url(../roboto/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: Roboto-thin;
-  src: url(../roboto/Roboto-Thin.ttf);
-}
-@font-face {
-  font-family: Shirkhand;
-  src: url(../shirkhand/Shrikhand-Regular.ttf);
-}
 .header__logo--position {
   display: flex;
   flex-direction: row-reverse;
@@ -418,6 +402,22 @@ li:nth-child(5) {
   display: none;
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url(../roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-bold;
+  src: url(../roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: Roboto-thin;
+  src: url(../roboto/Roboto-Thin.ttf);
+}
+@font-face {
+  font-family: Shirkhand;
+  src: url(../shirkhand/Shrikhand-Regular.ttf);
+}
 * {
   box-sizing: border-box;
 }
@@ -530,7 +530,7 @@ footer ul .handshake::before {
 }
 footer ul .contact__a a {
   text-decoration: none;
-  color: white-text-color;
+  color: #FFFF;
 }
 
 /*# sourceMappingURL=style.css.map */

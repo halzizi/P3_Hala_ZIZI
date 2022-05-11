@@ -1,20 +1,3 @@
-@font-face {
-   font-family: Roboto;
-   src: url(../roboto/Roboto-Regular.ttf);
-}
-@font-face {
-   font-family: Roboto-bold;
-   src: url(../roboto/Roboto-Bold.ttf);
-}
-@font-face {
-   font-family: Roboto-thin;
-   src: url(../roboto/Roboto-Thin.ttf);
-}
-@font-face {
-   font-family: Shirkhand;
-   src: url(../shirkhand/Shrikhand-Regular.ttf);
-}
-
 .header {
    &__logo--position {
       display: flex;

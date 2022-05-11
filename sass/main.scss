@@ -2,6 +2,23 @@
 @import "./components/pageresto";
 @import "./components/pageaccueil";
 
+@font-face {
+    font-family: Roboto;
+    src: url(../roboto/Roboto-Regular.ttf);
+ }
+ @font-face {
+    font-family: Roboto-bold;
+    src: url(../roboto/Roboto-Bold.ttf);
+ }
+ @font-face {
+    font-family: Roboto-thin;
+    src: url(../roboto/Roboto-Thin.ttf);
+ }
+ @font-face {
+    font-family: Shirkhand;
+    src: url(../shirkhand/Shrikhand-Regular.ttf);
+ }
+
 * {
     box-sizing: border-box;
 }
@@ -92,33 +109,33 @@ footer {
     height: 198px;
 
     .footer__logo {
-    padding: 27px 0 0 20px;
+        padding: 27px 0 0 20px;
     }
 
     ul {
-    list-style-type: none;
-    height: 95px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+        list-style-type: none;
+        height: 95px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-    .utensils::before {
-        font-family: 'FontAwesome';
-        content: "\f2e7";
-        margin-right:15px;
-    }
-
-    .handshake::before {
-        font-family: 'FontAwesome';
-        content: "\f4c4";
-        margin-right:15px;
-    }
-
-    .contact__a {
-        a {
-    text-decoration: none;
-    color: white-text-color;
+        .utensils::before {
+            font-family: 'FontAwesome';
+            content: "\f2e7";
+            margin-right:15px;
         }
-    }
+
+        .handshake::before {
+            font-family: 'FontAwesome';
+            content: "\f4c4";
+            margin-right:15px;
+        }
+
+        .contact__a {
+            a {
+                text-decoration: none;
+                color: $white-text-color;
+            }
+        }
     }
 }
