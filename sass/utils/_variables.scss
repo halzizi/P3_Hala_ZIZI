@@ -77,7 +77,7 @@ $white-text-color: #FFFF;
 
 @for $i from 1 through $total-items {
   li:nth-child(#{$i}) {
-    animation-delay: 1s * $i;
+    animation-delay: 0.8s * $i;
   }
 }
 
